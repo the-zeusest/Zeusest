@@ -33,7 +33,7 @@
       'https://youtu.be/sCLUO6SzQtg',  
       'https://youtu.be/lsYUN1hftyw',  
       'https://youtu.be/U8wk5Ed90fk',  
-      'https://youtu.be/hh-U98bN3Vc',  
+      'https://youtu.be/hh-U98b3Vc',  
       'https://youtu.be/npayCUDcWoE',  
       'https://youtu.be/GIf2CUNburw',  
       'https://youtu.be/nPzfOkoNiFk',  
@@ -209,6 +209,6 @@
     $('#draw-cards').onclick=()=>{cardPlaylist=[...ids.keys()].sort(()=>Math.random()-.5).slice(0,Math.min(6,ids.length));cardPosition=0;reading.hidden=false;cards.innerHTML='';cardPlaylist.forEach((songIndex,idx)=>{const card=document.createElement('div');card.className='card';card.innerHTML=`<div class="card-symbol">✦</div><div>Card ${idx+1}</div><button type="button" class="song-card"><strong>${songIndex+1}</strong><span>Play</span></button>`;card.querySelector('button').onclick=()=>playPosition(idx);cards.appendChild(card);});};  
     updateButtons();  
   </script>  
-    <script src="./whack-a-track.js"></script>
+  <script type="module" src="./src/animalPlaylist.js"></script>
 </body>
 </html>
